@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahithya - Portfolio</title>
+    <link rel="stylesheet" href="D:/mba/ResumeWebsite/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">Sahithya Santhanam</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Education">Education</a></li> <!-- Added new section link -->
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="home-content">
+            <h1>Hi, I'm <span>Sahithya</span></h1>
+            <p>MBA Student | PSGIM'26</p>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a first-year MBA student with a background in Computer Science Engineering, eager to merge my technical expertise
+		with strategic business insights. Passionate about market research, competitive analysis, and data-driven decision-making, I thrive in dynamic 
+		environments where I can contribute to product positioning and customer engagement strategies. My ability to analyze trends, support go-to-market strategies, 
+		and collaborate across teams enables me to drive impactful marketing initiatives. Always ready to learn and adapt, I seek an internship where 
+		I can leverage my analytical and marketing skills to support innovative campaigns and enhance product visibility in a competitive market.</p>
+    </section>
+
+    <!-- Education Section -->
+   <section id="Education">
+        <h2>Education</h2>
+        <div class="Education-container">
+            <div class="Education">
+                <h3>M.B.A (2024-2026)</h3>
+                <p>P.S.G Institute of Management  </p>
+            </div>
+            <div class="Education">
+                <h3>B.E - Computer Science and Engineering (2020- 2024)</h3>
+                <p>Dr.Mahalingam College of Engineering and Technology</p>
+            </div>
+            <div class="Education">
+                <h3>HSE (2020)</h3>
+                <p>Srinivasa Vidhyalaya Matric Higher Secondary School </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <p>Python</p>
+        </div>
+        <div class="skill">
+            <p>SQL</p>
+        </div>
+        <div class="skill">
+            <p>Power BI</p>
+        </div>
+        <div class="skill">
+            <p>Excel</p>
+        </div>
+        <div class="skill">
+            <p>Tableau</p>
+        </div>
+		<div class="skill">
+            <p>Prompting </p>
+        </div>
+		
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+            <div class="project">
+                <h3>Writer Identification</h3>
+                <p>Writer identification using deep learning employs MobileNet to classify handwriting by analyzing
+                features in handwritten text images. A comparative study with the ResNet model is also included.</p>
+            </div>
+            <div class="project">
+                <h3>Gesture Controlled PPT</h3>
+                <p>To eliminate the need for external devices and save time during presentations, we use machine
+                learning and computer vision to enable hand gesture-controlled PPT navigation.</p>
+            </div>
+            <div class="project">
+                <h3>Lab Info Automation</h3>
+                <p>Provides detailed information on devices in each laboratory, including specifications and installed
+                software. Also tracks device history by scanning QR codes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-wrapper">
+                <img src="D:\mba\ResumeWebsite\pictures\1.jpg" alt="Image 1">
+                <img src="D:\mba\ResumeWebsite\pictures\2.jpg" alt="Image 2">
+                <img src="D:\mba\ResumeWebsite\pictures\3.jpg" alt="Image 3">
+                <img src="D:\mba\ResumeWebsite\pictures\4.jpg" alt="Image 4">
+                <img src="D:\mba\ResumeWebsite\pictures\5.jpg" alt="Image 5">
+                <img src="D:\mba\ResumeWebsite\pictures\6.jpg" alt="Image 6">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:sahithyasanthanam323@gmail.com">sahithyasanthanam323@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sahithya-santhanam" target="_blank">Sahithya S</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sahithya</p>
+    </footer>
+
+    <script src="D:/mba/ResumeWebsite/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const gallery = document.querySelector('.gallery-wrapper');
+
+            function scrollGallery() {
+                gallery.style.transition = 'transform 1s linear';
+                gallery.style.transform = 'translateX(-300px)';
+
+                setTimeout(() => {
+                    gallery.appendChild(gallery.firstElementChild);
+                    gallery.style.transition = 'none';
+                    gallery.style.transform = 'translateX(0)';
+                }, 1000);
+            }
+
+            setInterval(scrollGallery, 3000);
+        });
+    </script>
+
+</body>
+</html>

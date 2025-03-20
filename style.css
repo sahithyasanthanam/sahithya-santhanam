@@ -1,0 +1,204 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1c1c1e;
+    color: #ffffff;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Header - Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* Sections - Fixing Spacing Issues */
+section {
+    padding: 100px 15%; /* Adjusted padding for better spacing */
+    text-align: center;
+    scroll-margin-top: 80px; /* Ensures sections are not hidden under navbar */
+}
+
+/* Fix for Home Section Visibility */
+#home {
+    padding-top: 140px; /* Pushes the content down so the full name is visible */
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 5px; /* Reduced margin below headings */
+    color: #ffcc00;
+}
+
+/* Fixing Spacing Between Sections */
+#about {
+    margin-bottom: -80px; /* Removed unnecessary space below About Me */
+    padding-top: 0px; /* Removes excess padding at the top */
+}
+
+/* Fixing Contact Me spacing */
+#about p {
+    margin-bottom: 5px; /* Reduces gap between text */
+}
+
+#about a {
+    display: inline-block;
+    margin-top: 5px; /* Reduces space between "Contact Me" and text */
+}
+
+/* Skills Section */
+#skills {
+    padding-top: 50px; /* Reduced from 100px */
+    padding-bottom: 20px; /* Reduced bottom padding */
+    margin-top: -20px; /* Pulls the section slightly upwards */
+}
+
+#skills h2 {
+    margin-bottom: 10px; /* Reduced space below heading */
+}
+
+/* Skill Item Spacing */
+.skill {
+    margin-bottom: 5px; /* Reduces extra gap between skills */
+}
+
+/* Gallery Section */
+#gallery {
+    text-align: center;
+    padding: 5px;
+    background-color: #f8f8f8;
+    margin-top: -40px; /* Pulls Gallery section closer */
+}
+
+/* Gallery Auto-Scrolling */
+.gallery-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    margin-top: -10px; /* Pulls gallery closer */
+}
+
+.gallery-wrapper {
+    display: flex;
+    gap: 15px;
+    width: max-content;
+    animation: scrollGallery 10s linear infinite;
+    align-items: center;
+}
+
+.gallery-wrapper img {
+    width: 280px;
+    height: 185px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Smooth Auto-Scrolling Animation */
+@keyframes scrollGallery {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Fix for Overlapping "Projects" Title */
+#projects {
+    padding-top: 80px;
+}
+
+/* Fixing Projects Section */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px; /* Removed negative margin */
+}
+
+.project {
+    background: #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+}
+
+/* Education Section */
+#education {
+    padding-top: 80px;
+}
+
+.education-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: -500px;
+}
+
+.education {
+    background: #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+}
+
+/* Contact Section */
+#contact {
+    padding-bottom: 40px; /* Reduced padding */
+}
+
+#contact a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    margin-top: 20px; /* Reduced margin */
+}
